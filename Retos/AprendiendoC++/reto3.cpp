@@ -7,7 +7,7 @@ void sort(string s[], int n)
     for (int i=1 ;i<n; i++)
     {
         string temp = s[i];
- 
+
         // Insert s[j] at its correct position
         int j = i - 1;
         while (j >= 0 && temp.length() > s[j].length())
@@ -49,7 +49,7 @@ string ordenarPalabras(string cadena){
             contador2++;
         }
 
-        
+
 
     }
 
@@ -57,25 +57,25 @@ string ordenarPalabras(string cadena){
 
 
   // for(int i=contador-1; i>=0; i--){
-       for(int i=0; i<contador; i++){   
+       for(int i=0; i<contador; i++){
          if(i==contador-1){
             resultado +=  Palabras[i];
             break;
         }
         resultado += Palabras[i] + " ";
     }
-    
+
     return resultado;
-   
+
 }
 
 void imprimir_Array(int Arr[],int log){
   for(int i=0; i< log; i++){
         cout << Arr[i] << "  ";
     }
-}   
+}
 
- 
+
 
 
 
@@ -88,19 +88,18 @@ int main()
     //variable que recibira la linea actual
     string cadena="";
     cin >> numero_lineas;
+    cin.get();
     for(int i=0;i<numero_lineas;i++){
-      cin >> cadena;
-      //getline(cin,linea);
+      getline(cin,cadena);
 
-      //resultado +=  ordenarPalabras(linea) + "\n";
+      ordenarPalabras(cadena) + "\n";
        //cout << ordenarPalabras(cadena);
- 
+
        cadena="";
-        
+
     }
-    
-    cout << ordenarPalabras("Top Coder comp Wedn at midnight");
-    cout << ordenarPalabras("sj a sa df r e w f d s a v c x z sd fd");
+
+    cout << resultado << "\n";
     return 0;
 }
 
